@@ -1,0 +1,91 @@
+﻿<Window x:Class="MonthlyClaimApp.ViewProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MonthlyClaimApp"
+        mc:Ignorable="d"
+        Title="ViewProfile" Height="700" Width="800">
+
+    <Grid Margin="20">
+        <!-- Define Grid Rows -->
+        <Grid.RowDefinitions >
+            <!-- Navbar Row -->
+            <RowDefinition Height="Auto"/>
+            <!-- Content Row -->
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- Navbar -->
+        <Menu Grid.Row="0" HorizontalAlignment="Stretch" Background="LightGray">
+            <MenuItem Header="Home" Click="Home_Click"/>
+            <MenuItem Header="Lecture Dashboard" Click="LectureDashboard_Click"/>
+            <MenuItem Header="View Profile" Click="ViewProfile_Click" Background="RED"/>
+            <MenuItem Header="History" Click="History_Click"/>
+            <MenuItem Header="Logout" Click="Logout_Click"/>
+        </Menu>
+
+        <!-- Main Content -->
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="3" CornerRadius="10" Background="White"
+                Padding="20" Margin="50" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="10" Color="Black" Opacity="0.5" BlurRadius="15"/>
+            </Border.Effect>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                <!-- Profile Image -->
+                <Image Source="C:\Users\RC_Student_lab\Desktop\MonthlyClaimApp\MonthlyClaimApp\images\png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" 
+                       Width="100" Height="100" 
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                <!-- Lecture ID -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Lecture ID:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="LectureIDTextBox" Width="200" Height="25" Margin="10,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- First Name -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="First Name:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="FirstNameTextBox" Width="200" Height="25" Margin="10,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- Last Name -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="Last Name:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="LastNameTextBox" Width="200" Height="25" Margin="10,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- ID Number -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="ID Number:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="IDNumberTextBox" Width="200" Height="25" Margin="10,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- Email -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="Email:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="EmailTextBox" Width="200" Height="25" Margin="50,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- Phone Number -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="Cell Number:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="PhoneNumberTextBox" Width="200" Height="25" Margin="10,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- Address -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="Address:" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="AddressTextBox" Width="200" Height="25" Margin="40,0,0,0" FontSize="14" IsReadOnly="True"/>
+                </StackPanel>
+
+                <!-- Done Button -->
+                <Button Content="Done" Width="120" Height="35" HorizontalAlignment="Center" Click="DoneButton_Click" Margin="0,20,0,0" FontSize="16"/>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

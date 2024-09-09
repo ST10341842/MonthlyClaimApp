@@ -1,0 +1,74 @@
+﻿<Window x:Class="MonthlyClaimApp.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MonthlyClaimApp"
+        mc:Ignorable="d"
+        Title="HomePage" Height="450" Width="800">
+    <Grid>
+        <!-- Center Grid for the 4 Buttons -->
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Button 1 - View Profile -->
+            <Button Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="2"  Background="White" Margin="15" Click="ViewProfile_Click"
+                    Width="200" Height="200">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="6" Opacity="0.5"/>
+                </Button.Effect>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    <Image Source="C:\Users\RC_Student_lab\Desktop\MonthlyClaimApp\MonthlyClaimApp\images\png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png" 
+                           Width="100" Height="100" HorizontalAlignment="Center"/>
+                    <TextBlock Text="View Profile" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="18"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Button 2 - Make Claim -->
+            <Button Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="2"  Background="White" Margin="15" Click="MakeClaim_Click"
+                    Width="200" Height="200">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="6" Opacity="0.5"/>
+                </Button.Effect>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    <Image Source="C:\Users\RC_Student_lab\Desktop\MonthlyClaimApp\MonthlyClaimApp\images\download (1).png" 
+                           Width="100" Height="100" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Make Claim" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="18"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Button 3 - Register -->
+            <Button Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="2"  Background="White" Margin="15" Click="Register_Click"
+                    Width="200" Height="200">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="6" Opacity="0.5"/>
+                </Button.Effect>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    <Image Source="C:\Users\RC_Student_lab\Desktop\MonthlyClaimApp\MonthlyClaimApp\images\download (2).png" 
+                           Width="100" Height="100" HorizontalAlignment="Center"/>
+                    <TextBlock Text="History" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="18"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Button 4 - Exit -->
+            <Button Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="2"  Background="White" Margin="15" Click="Exit_Click"
+                    Width="200" Height="200">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="6" Opacity="0.5"/>
+                </Button.Effect>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                    <Image Source="C:\Users\RC_Student_lab\Desktop\MonthlyClaimApp\MonthlyClaimApp\images\exit.jpg" 
+                           Width="100" Height="100" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Exit" HorizontalAlignment="Center" Margin="0,15,0,0" FontSize="18"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
